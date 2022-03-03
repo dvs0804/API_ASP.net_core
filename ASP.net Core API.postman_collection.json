@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Get Cities",
+			"name": "GET Cities",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -27,7 +27,7 @@
 			"response": []
 		},
 		{
-			"name": "Get City",
+			"name": "GET City",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -42,13 +42,20 @@
 						"api",
 						"cities",
 						"1"
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "application/xml",
+							"disabled": true
+						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Points of interest",
+			"name": "GET Points of interest",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -64,6 +71,265 @@
 						"cities",
 						"1",
 						"pointofinterest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Points of Interest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Iglesia Tremedal\",\r\n    \"descripcion\": \"Iglesia historica\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1028/api/cities/3/pointofinterest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"3",
+						"pointofinterest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT point of Interest",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"update Centrarl park\",\r\n    \"descripcion\":\"update - Muchas personas lo visitan\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1028/api/cities/1/pointofinterest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"1",
+						"pointofinterest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Point Of Interest(no descripcion)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"update again Centrarl park\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1028/api/cities/1/pointofinterest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"1",
+						"pointofinterest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Point of Interest",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\":  \"/name\",\r\n        \"value\": \"Updated - Central park\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:1028/api/cities/1/pointofinterest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"1",
+						"pointofinterest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Point of Interest(update multiple)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\":  \"/name\",\r\n        \"value\": \"Updated - Central park\"\r\n    },\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\":  \"/descripcion\",\r\n        \"value\": \"Updated - descripcion\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:1028/api/cities/1/pointofinterest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"1",
+						"pointofinterest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Point of interest(invalid property)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[   \r\n   {\r\n        \"op\": \"replace\",\r\n        \"path\":  \"/invalidproperty\",\r\n        \"value\": \"Updated - descripcion\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:1028/api/cities/1/pointofinterest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"1",
+						"pointofinterest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Point of Interest(remove name)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\":\"remove\",\r\n        \"path\":\"/name\"\r\n\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:1028/api/cities/1/pointofinterest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"1",
+						"pointofinterest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Point of Interest",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1028/api/cities/1/pointofinterest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"cities",
+						"1",
+						"pointofinterest",
+						"1"
 					]
 				}
 			},

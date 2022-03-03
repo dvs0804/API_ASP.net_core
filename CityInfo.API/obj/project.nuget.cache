@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "dZZ3nyaOXanzp5r6rh843/ycAlBVZ3KKpdsbMLjwHuF73EsnbcNl/R4ZCNwQhhYtqyzcv1YHAivXOcEAfh+iXw==",
+  "dgSpecHash": "obXrirbwLpc61cr7WfepCS8ElR2pn711fxj+XE53qAN5nqCXokX15vD2edUWzmtXKpPHDkYCZ+cn7XU+zscDrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Samuel\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API\\CityInfo.API.csproj",
+  "projectFilePath": "C:\\Users\\Samuel\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Samuel\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Samuel\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.0-preview.1.22109.13\\microsoft.aspnetcore.jsonpatch.7.0.0-preview.1.22109.13.nupkg.sha512",
+    "C:\\Users\\Samuel\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.0\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.0.nupkg.sha512",
+    "C:\\Users\\Samuel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Samuel\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Samuel\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
   ],
   "logs": []
 }
