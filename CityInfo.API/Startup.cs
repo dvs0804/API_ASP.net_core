@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace CityInfo.API
 {
     public class Startup
@@ -25,12 +26,17 @@ namespace CityInfo.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //services.AddControllersWithViews(options =>
+            //{
+            //    options.InputFormatters.Insert(0, GetJsonPatchInputFormatter());
+            //});
+            services.AddControllersWithViews().AddNewtonsoftJson(); 
             services.AddMvc(options => options.EnableEndpointRouting = false)
                 .AddMvcOptions(o =>
                 {
                     o.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
                 });
+            
             //    .AddJsonOptions(o =>
             //{
             //    if(o.SerializerSettings.ContractResolver != null)
