@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samuel\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {}
+    "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samuel\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {
+    "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samuel\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
         "projectName": "CityInfo.API",
-        "projectPath": "C:\\Users\\Samuel\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
-        "packagesPath": "C:\\Users\\Samuel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samuel\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\obj\\",
+        "projectPath": "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Samuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -48,9 +48,31 @@
               "target": "Package",
               "version": "[7.0.0-preview.1.22109.13, )"
             },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc2, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -75,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

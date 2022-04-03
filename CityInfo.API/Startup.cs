@@ -1,7 +1,9 @@
+using CityInfo.API.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -36,7 +38,8 @@ namespace CityInfo.API
                 {
                     o.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
                 });
-            
+
+
             //    .AddJsonOptions(o =>
             //{
             //    if(o.SerializerSettings.ContractResolver != null)
@@ -46,7 +49,11 @@ namespace CityInfo.API
             //        castedResolver.NamingStrategy = null;
             //    }
             //});
-
+            var connectionstring = @"Server=(localdb)\MSSQLLocalDB;Database=CityInfoDB;Trusted_Connection=True;";
+            services.AddDbContext<CityInfoContext>(o =>
+            {
+                o.UseSqlServer(connectionstring);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
