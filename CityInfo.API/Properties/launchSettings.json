@@ -12,9 +12,9 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Producction"
-      }
-    },
+        "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      },
     "CityInfo.API": {
       "commandName": "Project",
       "launchBrowser": true,

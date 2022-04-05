@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {}
+    "C:\\Users\\lenovo\\Documents\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {
+    "C:\\Users\\lenovo\\Documents\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\Documents\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
         "projectName": "CityInfo.API",
-        "projectPath": "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
+        "projectPath": "C:\\Users\\lenovo\\Documents\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\obj\\",
+        "outputPath": "C:\\Users\\lenovo\\Documents\\API_ASP.net_core\\CityInfo.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

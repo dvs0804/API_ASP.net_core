@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yOejJDGeIV6MQJVBWGW5Aw0YTfKcGkraTp7H8jxJRPMCUwMjZOBtViF2FBqZuzZqZRwJJBDvM6imAQT4i/jWvw==",
+  "dgSpecHash": "iXmoy4no8rsmPR/I+lpzA5RkRD6v4rEcQ7UvIiWD/JLShggRcebWz9fXYqMTwaHEWlMCVxd0vNK0f6u1WmwKog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\Desktop\\Denis\\API ASP.net core\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
+  "projectFilePath": "C:\\Users\\lenovo\\Documents\\API_ASP.net_core\\CityInfo.API\\CityInfo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

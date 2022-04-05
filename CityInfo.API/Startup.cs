@@ -1,4 +1,5 @@
 using CityInfo.API.Context;
+using CityInfo.API.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -18,12 +19,16 @@ namespace CityInfo.API
 {
     public class Startup
     {
+        private readonly IConfiguration _configuracion;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            _configuracion = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
         public IConfiguration Configuration { get; }
+
+        
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -49,11 +54,12 @@ namespace CityInfo.API
             //        castedResolver.NamingStrategy = null;
             //    }
             //});
-            var connectionstring = @"Server=(localdb)\MSSQLLocalDB;Database=CityInfoDB;Trusted_Connection=True;";
+            var connectionstring = _configuracion["ConnectionStrings:CityInfoDBConnectionString"];
             services.AddDbContext<CityInfoContext>(o =>
             {
                 o.UseSqlServer(connectionstring);
             });
+            services.AddScoped<ICityInfoRepository, CityIfoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
