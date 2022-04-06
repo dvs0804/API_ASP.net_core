@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "394edd9d-8c44-454f-9a80-9215f3e0cc7d",
+		"_postman_id": "93e9fd5f-af7c-43e9-b397-2a326891d572",
 		"name": "ASP.net Core API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -330,6 +330,26 @@
 						"1",
 						"pointofinterest",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Test Database",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1028/api/testdatabase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1028",
+					"path": [
+						"api",
+						"testdatabase"
 					]
 				}
 			},

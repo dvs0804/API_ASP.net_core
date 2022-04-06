@@ -1,4 +1,5 @@
-﻿using CityInfo.API.Models;
+﻿using AutoMapper;
+using CityInfo.API.Models;
 using CityInfo.API.Service;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,27 +13,29 @@ namespace CityInfo.API.Controllers
     public class CitiesController: ControllerBase
     {
         private readonly ICityInfoRepository _cityInfoRepository;
+        private readonly IMapper _mapper;
 
-        public CitiesController(ICityInfoRepository cityInfoRepository)
+        public CitiesController(ICityInfoRepository cityInfoRepository,IMapper mapper)
         {
             _cityInfoRepository = cityInfoRepository ?? throw new ArgumentNullException(nameof(cityInfoRepository));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
         [HttpGet]
         public IActionResult GetCities()
         {
             var cityEntities = _cityInfoRepository.GetCities();
-            var results = new List<CityWithoutPointOfInterestDto>();
-            foreach(var CityEntity in cityEntities)
-            {
-                results.Add(new CityWithoutPointOfInterestDto
-                {
-                    Id = CityEntity.Id,
-                    Name = CityEntity.Name,
-                    description = CityEntity.descripcion
+            //var results = new List<CityWithoutPointOfInterestDto>();
+            //foreach(var CityEntity in cityEntities)
+            //{
+            //    results.Add(new CityWithoutPointOfInterestDto
+            //    {
+            //        Id = CityEntity.Id,
+            //        Name = CityEntity.Name,
+            //        description = CityEntity.descripcion
 
-                });
-            } 
-            return Ok(results);
+            //    });
+            //} 
+            return Ok(_mapper.Map<IEnumerable<CityWithoutPointOfInterestDto>>(cityEntities));
         }
 
         [HttpGet("{id}")]
@@ -45,32 +48,34 @@ namespace CityInfo.API.Controllers
             }
             if (includePointOfInterest)
             {
-                var cityResult = new CityDto()
-                {
-                    Id = city.Id,
-                    Name = city.Name,
-                    Descripcion = city.descripcion
-                };
+                return Ok(_mapper.Map<CityDto>(city));
+            //    var cityResult = new CityDto()
+            //    {
+            //        Id = city.Id,
+            //        Name = city.Name,
+            //        Descripcion = city.descripcion
+            //    };
 
-                foreach(var poi in city.PointOfInterest)
-                {
-                    cityResult.PointOfInterest.Add(
-                        new PointOfInterestDto()
-                        {
-                            id = poi.Id,
-                            name = poi.Name,
-                            descripcion = poi.description
-                        });
-                }
-                return Ok(cityResult); 
+            //    foreach(var poi in city.PointOfInterest)
+            //    {
+            //        cityResult.PointOfInterest.Add(
+            //            new PointOfInterestDto()
+            //            {
+            //                id = poi.Id,
+            //                name = poi.Name,
+            //                descripcion = poi.description
+            //            });
+            //    }
+            //    return Ok(cityResult); 
             }
-            var CityWithoutPointOfInteresResult = new CityWithoutPointOfInterestDto()
-            {
-                Id= city.Id,
-                Name= city.Name,
-                description = city.descripcion
-            };
-            return Ok(CityWithoutPointOfInteresResult);
+            return Ok(_mapper.Map<CityWithoutPointOfInterestDto>(city));
+            //var CityWithoutPointOfInteresResult = new CityWithoutPointOfInterestDto()
+            //{
+            //    Id= city.Id,
+            //    Name= city.Name,
+            //    description = city.descripcion
+            //};
+            //return Ok(CityWithoutPointOfInteresResult);
         }
     }
 }
